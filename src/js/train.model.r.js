@@ -1,7 +1,9 @@
 var train_model = [1,1,1,2,2,3,4,4,4,5,5,6,6,6,7,7,7,8,8,8,9,9,9,1,1,1,1]; //Modelo inicial de entrenamiento
 var possibles_models_win = [[1,2,3],[1,4,7],[2,5,8],[3,6,9],[4,5,6],[7,8,9],[1,5,9],[3,5,7]]; //Modelos posibles para ganar
+var pass_values = [];for (let i = 0; i < train_model.length; i++) {pass_values.push(train_model[[i]]);}
+console.log(pass_values);
 
-//Functions
+//Functions cookies get and check
 
 function get_Cookie(v){
     var name = v + "=";
@@ -30,6 +32,9 @@ if(checkCookie("train_m")){
     var expires = "expires="+d.toUTCString();
 
     document.cookie = "train_m="+train_model+";"+expires;
+
+    for (let i = 0; i < train_model.length; i++) {pass_values.push(train_model[[i]]);}
+
 } else {
 
     var d = new Date();

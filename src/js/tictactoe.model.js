@@ -37,6 +37,8 @@ l(function(){
         });
     }
 
+    
+
     function init_process_computer(v) {
         if (v == false && positions_game.length > 0){ 
             console.log("Init bot");
